@@ -1,4 +1,4 @@
-var app = angular.module("topPackApp", ['ngRoute']);
+var app = angular.module("topPackApp", ['ngRoute', 'ngAnimate']);
 
 app.config(function($routeProvider) {
   $routeProvider

@@ -65,11 +65,13 @@ body, html{
   text-align: center;
 }
 .result-url{
+  display: block;
   text-align: center;
   font-size: 10px;
   font-weight: 600;
 }
 .btn-import{
+  width: 100%;
   text-decoration: none;
   color: #EEE !important;
 }
@@ -96,6 +98,7 @@ body, html{
   list-style: none;
 }
 .exists{
+  display: block;
   width: 32px;
   margin-left: auto;
   margin-right: auto;
@@ -116,4 +119,31 @@ body, html{
 .ranking{
   font-size: 20px;
   font-weight: 100;
+}
+.card-results{
+  padding: 0;
+  border: 0;
+}
+.card-results>.card-header{
+  background-color: #00897B;
+}
+.card-results>.card-header>.result-name{
+  color: #FEFEFE;
+}
+.result-times{
+  font-size: 12px;
+  float: right;
+  margin-top: 10px;
+  font-weight: 600;
+}
+.fade-anim.ng-enter {
+  transition: .5s linear all;
+  opacity:0;
+}
+.fade-anim.ng-enter-stagger {
+  transition-delay: 0.1s;
+  transition-duration: 0s;
+}
+.fade-anim.ng-enter.ng-enter-active {
+  opacity:1;
 }
