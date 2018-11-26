@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <h1 class="heading mt-5"><a href="/">Search Repositories</a></h1>
+    <h1 class="heading mt-5 current"><a href="#/packages">Top Packages</a></h1>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-8 offset-md-2" ng-repeat="(name, each) in results">
+          <div class="card mb-3">
+            <h4 class="result-name"><span class="ranking">#{{$index + 1}}</span> {{name}}</h4>
+            <hr />
+            <div class="container">
+              <div class="row">
+                <div class="col-md-4"ng-repeat="r in each.repos">
+                <h6>{{r.name}}</h6>
+                <h6 class="result-owner" style="text-align: left; margin-bottom: 0;">by {{r.owner}}</h6>
+                <a href="{{r.url}}" style="text-decoration: none; font-size: 10px; font-weight: 600;">Visit Github Page</a>
+                <hr />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
