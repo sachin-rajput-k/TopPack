@@ -13,10 +13,10 @@
         <div class="col-md-4 fade-anim" ng-repeat="result in results">
           <div class="card card-results mb-3">
             <div class="card-header">
-              <h4 class="result-name" style="margin-bottom: 0;">{{result.name}}</h4>
+              <h4 class="result-name" style="margin-bottom: 0; font-weight: 400;">{{result.name}}</h4>
             </div>
             <div class="card-body">
-              <img class="exists mb-1" src="/img/exists.png" ng-if="result.exists" />
+              <img class="exists mb-3 rounded-circle" src="{{result.avatar_url}}" ng-if="result.avatar_url" style="width: 75px;"/>
               <h4 class="result-owner">by {{result.owner}}</h4>
               <h4 class="result-date text-capitalize">updated on {{result.updated_at|date:mediumDate}}</h4>
               <hr />
@@ -39,6 +39,7 @@
                   </div>
                 </div>
               </div>
+              <img class="exists mt-3" src="/img/exists.png" ng-if="result.exists" />
               <hr ng-if="result.exists == undefined" />
               <button class="btn btn-primary btn-import mt-2" id="button-{{result.item_no}}" ng-if="result.exists == undefined" ng-click="importPackages(result.name, result.owner, result.description,result.html_url, result.item_no);">Import</button>
               <img id="img-{{result.item_no}}" src="/img/searching.gif" class="searching-gif mt-2 d-none"/>
